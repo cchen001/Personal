@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Chieh Chen — Resume</title>
+<style>
+  /* Print-first resume. Single column, real text layer, ATS-parseable.
+     Export: open in Chrome > Print > Save as PDF, margins "Default", background graphics OFF. */
+  :root {
+    --ink: #16181d;
+    --muted: #4a5058;
+    --rule: #c9ced6;
+    --accent: #1f3a5f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: "Source Sans Pro", Calibri, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.42;
+    color: var(--ink);
+    background: #fff;
+    margin: 0 auto;
+    padding: 0.55in 0.6in;
+    max-width: 8.5in;
+  }
+  h1 {
+    font-size: 21pt;
+    line-height: 1.1;
+    margin: 0 0 3px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+  }
+  .contact { font-size: 9.5pt; color: var(--muted); margin: 0 0 9px; }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .headline {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 2px;
+  }
+  .subheadline {
+    font-size: 10pt;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+  h2 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+    margin: 17px 0 9px;
+  }
+  .summary { margin: 0 0 2px; }
+  .role { margin: 0 0 12px; page-break-inside: avoid; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role-title { font-size: 11pt; font-weight: 700; margin: 0; }
+  .role-dates { font-size: 9.5pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .role-meta { font-size: 9.5pt; color: var(--muted); margin: 1px 0 5px; }
+  ul { margin: 0; padding-left: 16px; }
+  li { margin-bottom: 4px; }
+  li::marker { color: var(--muted); }
+  b, strong { font-weight: 700; }
+  .earlier p { margin: 0 0 5px; }
+  .skills p { margin: 0 0 5px; }
+  .skills .cat { font-weight: 700; }
+  .oneline { margin: 0 0 4px; }
+  @media print {
+    body { padding: 0; font-size: 10pt; }
+    a { color: inherit; }
+    h2 { page-break-after: avoid; }
+  }
+  @page { margin: 0.5in 0.55in; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Jade Chieh Chen</h1>
+  <p class="contact">
+    chiehjadechen@gmail.com &middot; +1 437 660 2419 &middot;
+    <a href="https://www.linkedin.com/in/jade-chieh-chen/">linkedin.com/in/jade-chieh-chen</a>
+  </p>
+  <p class="headline">AI Support Engineer — Customer Operations &rarr; Production AI Systems</p>
+  <p class="subheadline">I take support functions that run on people and rebuild them as systems that run themselves, safely.</p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Support operator turned builder. Over 14 months at a B2B data SaaS I took a manual queue that spiked to 400&ndash;500 tickets a day and replaced it with a production AI agent that triages, answers, and executes refunds, credits and cancellations under hard authorization ceilings &mdash; specced, evaluated, deployed to AWS, and audited weekly by me. Eight years of client-facing sales and CX sit underneath the engineering, which is why the agent's answers sound like a person and its money guardrails were written by someone who has personally had to refund an angry customer.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">AI Support Engineer &mdash; Evaboot</p>
+      <span class="role-dates">Jul 2025 &ndash; Present</span>
+    </div>
+    <p class="role-meta">Remote &middot; B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole owner of the support function | SMB to Enterprise</p>
+    <ul>
+      <li><b>Built and shipped the company's production AI support agent end to end</b> &mdash; knowledge base, retrieval, eval harness, AWS deployment, live audit. New users route to it by default, and it executes refunds, credits, cancellations and invoice voids autonomously under typed authorization ceilings (refund &le; $29, credit &le; 200), with idempotency keys, a verified action ledger, and a weekly audit against what each customer actually asked for.</li>
+      <li><b>Cut median customer wait to 3.3 staffed hours</b> by retiring a two-hour human monitoring window for a 24-hour automated cycle plus a two-hourly queue digest that reports itself into team chat &mdash; the first support signal reaching a person without anyone fetching it. Drove a working inbox from 630 active threads to 120 and cleared the owed queue to zero on repeat cycles.</li>
+      <li><b>Designed the agent's entire knowledge layer from scratch</b>: a 15-category taxonomy over 120 articles, SQLite + FTS5 retrieval (deliberately skipping vector RAG as over-engineering at 15k words), and a rebuilt help center on Astro Starlight / Cloudflare Pages migrated off Intercom &mdash; 118 articles, 53 public, zero dead links, after recovering 134 images before their CDN links expired.</li>
+      <li><b>Gated every agent change behind a golden eval</b>: a 114-case regression suite scored by 50 draft and 50 judge subagents through a deterministic scorer (hard rules 100%, soft 90%); 603 tests green on the triage layer, which is barred from touching money by a test rather than a comment.</li>
+      <li><b>Recovered revenue and closed billing leaks hands-on</b>: built and submitted evidence on 19 disputes across 10 customers (~$1,070 + &euro;49) with zero failures &mdash; 21 submissions in 15 minutes once systematized &mdash; and executed verified money batches (8 refunds / $293.97; a later run of $425 + &euro;9 refunded and $99 collected) against a live reconciled ledger.</li>
+      <li><b>Found the silent failures no dashboard was reporting</b>: only 4 of ~296 support emails were reaching the ticketing system (a 30-day blind spot), closed-thread counts read 1 against 212 real, and published reply-time medians ran ~3x optimistic on a wrong staffed-day assumption. Archived 18,065 conversations and ~5,300 attachments to S3 ahead of a seat sunset with zero fetch failures.</li>
+      <li><b>Ran the function solo through every incident</b> &mdash; Chrome Web Store delisting, recurring export failures, 400&ndash;500 ticket spikes &mdash; while carrying live demos, contract execution (including a 1M-credit deal via DocuSign), discount policy, and outbound campaigns at ~3,000 emails/week.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">SaaS Sales Executive &mdash; All Funeral Services</p>
+      <span class="role-dates">Jan 2025 &ndash; Jul 2025</span>
+    </div>
+    <p class="role-meta">New York, USA &middot; DeathTech SaaS | 100+ employees | SMB to Mid-Market | Avg deal $20K USD</p>
+    <ul>
+      <li>Promoted from Lead Generation to Pre-Sales in 1 month and onto the Account Management team at 5 months, on initiative and speed through the funnel.</li>
+      <li>Made 80&ndash;100 cold calls/day, booking 5&ndash;8 demos/week; supported a first closed deal inside 30 days against a typical 6-month cycle.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Senior Team Lead &mdash; Globalfaces Direct</p>
+      <span class="role-dates">Mar 2024 &ndash; Dec 2024</span>
+    </div>
+    <p class="role-meta">Toronto, Canada &middot; Nonprofit fundraising | 1,200 reps | B2C &amp; SMB | Avg deal $2K USD</p>
+    <ul>
+      <li>Promoted to Senior Team Lead within 1 month; led a door-to-door nonprofit fundraising team.</li>
+      <li>Closed 10+ sales/week from 150+ donor presentations; trained and coached 20+ reps, lifting close rates and team consistency.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Sales Account Manager &mdash; Yutian Printing</p>
+      <span class="role-dates">Sep 2021 &ndash; Feb 2024</span>
+    </div>
+    <p class="role-meta">Kaohsiung, Taiwan &middot; Commercial printing | 20 employees | B2C &amp; SMB | Avg deal $7K USD</p>
+    <ul>
+      <li>Owned full-cycle sales and rebuilt the pipeline from 0 to 7,000+ contacts through a loyalty program and omni-channel outreach.</li>
+      <li>Rebuilt the CRM, scoped pricing, led a 4-person team, and launched market strategies that held through COVID; analyzed campaign ROI to find and fix revenue inefficiencies.</li>
+    </ul>
+  </div>
+
+  <div class="role earlier">
+    <div class="role-head">
+      <p class="role-title">Earlier</p>
+      <span class="role-dates">2018 &ndash; 2021</span>
+    </div>
+    <p class="oneline"><b>Recruitment Consultant</b>, PERSOLKELLY Taiwan &middot; Taipei &middot; Sep 2020 &ndash; Sep 2021 &mdash; full-cycle IT recruitment for enterprise clients (Ubiquiti, TP-Link, Amazon Eero); 50+ cold calls/day.</p>
+    <p class="oneline"><b>Product Demonstrator</b>, Ajinomoto Food Europe &middot; London, UK &middot; Oct 2018 &ndash; Sep 2020 &mdash; 25 UK venues; drove a 20% lift in customer satisfaction and trained new hires.</p>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Technical Skills</h2>
+  <p><span class="cat">AI &amp; Agents</span> &mdash; Production LLM agent design, prompt engineering, tool/function calling, MCP servers, golden-set evaluation harnesses, LLM-as-judge scoring, prompt caching, knowledge-base and retrieval design, Claude, Codex, Cursor</p>
+  <p><span class="cat">Support &amp; CX Platforms</span> &mdash; Intercom (Fin AI agent, workflows, custom answers, data connectors, escalation rules), help-center architecture, CSAT and resolution instrumentation, triage and queue design</p>
+  <p><span class="cat">Billing &amp; Revenue Ops</span> &mdash; Stripe (disputes, refunds, invoices, subscriptions, idempotency), chargeback evidence automation, dispute-prevention policy, DocuSign contracts, discount policy design</p>
+  <p><span class="cat">Cloud &amp; Infrastructure</span> &mdash; AWS (EC2, S3, Lambda, SES, IAM, Secrets Manager), Cloudflare Pages, Supabase, Astro Starlight, Bubble, n8n, webhooks and REST integrations</p>
+  <p><span class="cat">Engineering</span> &mdash; Python, SQL, SQLite/FTS5, React, Git/GitHub (spec &rarr; plan &rarr; review &rarr; merge), pytest, automated code-review gates, security review</p>
+  <p><span class="cat">Go-to-Market</span> &mdash; Live product demos, cold outreach at scale, HubSpot, LinkedIn Sales Navigator, GDPR-sensitive enterprise conversations</p>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p class="oneline"><b>Bachelor of Arts (BA), Arts Management</b> &mdash; University of London, London, UK &middot; 2020</p>
+</section>
+
+<section>
+  <h2>Awards</h2>
+  <p class="oneline">"Explaining Technology to Boomers" Award, 2025</p>
+</section>
+
+</body>
+</html>
