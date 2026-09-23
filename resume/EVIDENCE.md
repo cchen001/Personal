@@ -167,6 +167,21 @@ Added after Jade flagged that earlier drafts framed this as "configured Intercom
 | Claim | Status |
 |---|---|
 | **~$100K/year saved in tooling** | Not in the journals. It is your figure and your company's data, so it stays on the resume — but be ready to break it down: Intercom seats × price, Fin resolution charges, the Pro add-on you assessed at $99+/month, minus what AWS now costs you. An interviewer who works in support tooling *will* ask, and "roughly" is a fine answer only if you can show the arithmetic. |
-| **~50% cut in support handling time** | Not directly stated. The journals support: reply time down ~30% from the React artifact (3 Mar 2026); a two-hour monitoring window replaced by a 24-hour cycle; median wait 3.3 staffed hours; inbox 630 → 120. If your 50% comes from a measurement you ran, keep it and cite the basis. If it is an estimate, say "roughly halved" in conversation and let the 3.3-hour median and the 630 → 120 carry the written claim. |
+| **~85% of conversations resolved without a human** | Not stated as a figure, but **derivable from your own entries**, which is why it is the better claim. On 27 Jul 2026 you recorded "a 24-hour batch is roughly 70 tickets"; across Aug–Sep 2026 the owed queue runs at "twelve owed down to one" (14 Sep), "eighteen owed to nine" (17 Aug), "55 open narrowed to 25 real customers" (10 Aug). Roughly 12 owed against roughly 70 daily is ~83% never reaching a person. That independently corroborates 85% and gives you the arithmetic to show. Context to cite: a 95% target was set on 11 Feb 2026, with the push at the 70% mark a week later. |
 
 Do not let either number be the thing that unravels an otherwise airtight page. Everything else here has a date.
+
+
+### Make the 85% a measured number, not an estimate
+
+You already built the instrument that produces this figure properly: the resolution data pool, which categorises every conversation as confirmed, assumed, or abandoned mid-conversation, fed by the auto-close and CSAT hooks (merged 17–18 Jul 2026).
+
+**Query it before you apply.** Pick a clean 30-day window after the 31 Jul cutover and pull the real number. That turns "roughly 85%" into "84.6% over the 30 days to X, measured as conversations closed with no human reply." Probably half an hour of work, and it is the difference between a claim an interviewer probes and a claim that ends the question.
+
+**Define the denominator before you say the number out loud.** Automation rate can mean at least three different things:
+
+1. Conversations where no human ever replied
+2. Conversations resolved without escalation to a human
+3. Conversations where the AI sent the final message
+
+These give different figures. Pick one, state it in the same breath as the number, and stay consistent. At Reap in particular this will be tested — IRR is the metric their role is measured on, and they will want to know exactly how you counted.
