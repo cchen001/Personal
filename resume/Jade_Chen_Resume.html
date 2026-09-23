@@ -18,7 +18,7 @@
   body {
     font-family: "Source Sans Pro", Calibri, "Helvetica Neue", Arial, sans-serif;
     font-size: 10.5pt;
-    line-height: 1.42;
+    line-height: 1.34;
     color: var(--ink);
     background: #fff;
     margin: 0 auto;
@@ -44,7 +44,7 @@
     font-size: 10pt;
     font-style: italic;
     color: var(--muted);
-    margin: 0 0 14px;
+    margin: 0 0 11px;
   }
   h2 {
     font-size: 9.5pt;
@@ -54,10 +54,10 @@
     color: var(--accent);
     border-bottom: 1px solid var(--rule);
     padding-bottom: 3px;
-    margin: 17px 0 9px;
+    margin: 13px 0 7px;
   }
   .summary { margin: 0 0 2px; }
-  .role { margin: 0 0 12px; page-break-inside: avoid; }
+  .role { margin: 0 0 9px; page-break-inside: avoid; }
   .role-head {
     display: flex;
     justify-content: space-between;
@@ -68,15 +68,15 @@
   .role-dates { font-size: 9.5pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
   .role-meta { font-size: 9.5pt; color: var(--muted); margin: 1px 0 5px; }
   ul { margin: 0; padding-left: 16px; }
-  li { margin-bottom: 4px; }
+  li { margin-bottom: 3px; }
   li::marker { color: var(--muted); }
   b, strong { font-weight: 700; }
   .earlier p { margin: 0 0 5px; }
-  .skills p { margin: 0 0 5px; }
+  .skills p { margin: 0 0 3px; }
   .skills .cat { font-weight: 700; }
   .oneline { margin: 0 0 4px; }
   @media print {
-    body { padding: 0; font-size: 10pt; }
+    body { padding: 0; font-size: 9.7pt; }
     a { color: inherit; }
     h2 { page-break-after: avoid; }
   }
@@ -91,13 +91,13 @@
     chiehjadechen@gmail.com &middot; +1 437 660 2419 &middot;
     <a href="https://www.linkedin.com/in/jade-chieh-chen/">linkedin.com/in/jade-chieh-chen</a>
   </p>
-  <p class="headline">AI Support Engineer — Customer Operations &rarr; Production AI Systems</p>
-  <p class="subheadline">I take support functions that run on people and rebuild them as systems that run themselves, safely.</p>
+  <p class="headline">AI Support Engineer — The Whole Customer-Facing Function, Then the System That Runs It</p>
+  <p class="subheadline">Sole support, onboarding, education and demos for a B2B SaaS &mdash; then the production AI agent that handles most of it. I still work the queue every morning.</p>
 </header>
 
 <section>
   <h2>Summary</h2>
-  <p class="summary">Support operator turned builder. Over 14 months at a B2B data SaaS I took a manual queue that spiked to 400&ndash;500 tickets a day and replaced it with a production AI agent that triages, answers, and executes refunds, credits and cancellations under hard authorization ceilings &mdash; specced, evaluated, deployed to AWS, and audited weekly by me. Eight years of client-facing sales and CX sit underneath the engineering, which is why the agent's answers sound like a person and its money guardrails were written by someone who has personally had to refund an angry customer.</p>
+  <p class="summary">For fourteen months I have been the entire customer-facing function at a B2B data SaaS: support, onboarding, customer education, live demos and the product-feedback loop into engineering, alone. Then I built the production AI agent that now carries most of it &mdash; knowledge base, eval harness, AWS deployment, and autonomous refunds, credits and cancellations under hard authorization ceilings. Eight years of client-facing sales sit underneath the engineering, which is why the agent's answers sound like a person and its money guardrails were written by someone who still works the queue it serves.</p>
 </section>
 
 <section>
@@ -108,7 +108,7 @@
       <p class="role-title">AI Support Engineer &mdash; Evaboot</p>
       <span class="role-dates">Jul 2025 &ndash; Present</span>
     </div>
-    <p class="role-meta">Remote &middot; B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole owner of the support function | SMB to Enterprise</p>
+    <p class="role-meta">Remote &middot; B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole customer-facing hire: support, onboarding, education, demos | SMB to Enterprise</p>
     <ul>
       <li><b>Built and shipped the company's production AI support agent end to end</b> &mdash; knowledge base, retrieval, eval harness, AWS deployment, live audit. New users route to it by default, and it executes refunds, credits, cancellations and invoice voids autonomously under typed authorization ceilings (refund &le; $29, credit &le; 200), with idempotency keys, a verified action ledger, and a weekly audit against what each customer actually asked for.</li>
       <li><b>Cut median customer wait to 3.3 staffed hours</b> by retiring a two-hour human monitoring window for a 24-hour automated cycle plus a two-hourly queue digest that reports itself into team chat &mdash; the first support signal reaching a person without anyone fetching it. Drove a working inbox from 630 active threads to 120 and cleared the owed queue to zero on repeat cycles.</li>
@@ -116,7 +116,8 @@
       <li><b>Gated every agent change behind a golden eval</b>: a 114-case regression suite scored by 50 draft and 50 judge subagents through a deterministic scorer (hard rules 100%, soft 90%); 603 tests green on the triage layer, which is barred from touching money by a test rather than a comment.</li>
       <li><b>Recovered revenue and closed billing leaks hands-on</b>: built and submitted evidence on 19 disputes across 10 customers (~$1,070 + &euro;49) with zero failures &mdash; 21 submissions in 15 minutes once systematized &mdash; and executed verified money batches (8 refunds / $293.97; a later run of $425 + &euro;9 refunded and $99 collected) against a live reconciled ledger.</li>
       <li><b>Found the silent failures no dashboard was reporting</b>: only 4 of ~296 support emails were reaching the ticketing system (a 30-day blind spot), closed-thread counts read 1 against 212 real, and published reply-time medians ran ~3x optimistic on a wrong staffed-day assumption. Archived 18,065 conversations and ~5,300 attachments to S3 ahead of a seat sunset with zero fetch failures.</li>
-      <li><b>Ran the function solo through every incident</b> &mdash; Chrome Web Store delisting, recurring export failures, 400&ndash;500 ticket spikes &mdash; while carrying live demos, contract execution (including a 1M-credit deal via DocuSign), discount policy, and outbound campaigns at ~3,000 emails/week.</li>
+      <li><b>Built the onboarding and customer-education function from nothing</b> &mdash; no onboarding documentation existed when I arrived. Designed the flow (three guided nodes plus pricing), wrote the material, and produced the tutorial library end to end from script to final edit: HubSpot and Clay integrations, recurring-export walkthroughs, and in-app onboarding video. Authored the tone handbook that every human and agent reply is now written against, and trained a delegate onto part of the queue.</li>
+      <li><b>Carried the commercial surface alone alongside it</b> &mdash; live demos through to close, including GDPR-skeptical enterprise buyers; contract execution (1M-credit deal via DocuSign); discount policy design ($299/mo threshold, two-route logic); outbound campaigns at ~3,000 emails/week. Became engineering's product-defect channel, publishing a machine-readable triage feed so they could action signal without opening conversations &mdash; one record per defect signature rather than one per affected customer. Held all of it through every incident, including a Chrome Web Store delisting and 400&ndash;500 ticket spikes, as the only customer-facing person in the company.</li>
     </ul>
   </div>
 
@@ -173,7 +174,8 @@
   <p><span class="cat">Billing &amp; Revenue Ops</span> &mdash; Stripe (disputes, refunds, invoices, subscriptions, idempotency), chargeback evidence automation, dispute-prevention policy, DocuSign contracts, discount policy design</p>
   <p><span class="cat">Cloud &amp; Infrastructure</span> &mdash; AWS (EC2, S3, Lambda, SES, IAM, Secrets Manager), Cloudflare Pages, Supabase, Astro Starlight, Bubble, n8n, webhooks and REST integrations</p>
   <p><span class="cat">Engineering</span> &mdash; Python, SQL, SQLite/FTS5, React, Git/GitHub (spec &rarr; plan &rarr; review &rarr; merge), pytest, automated code-review gates, security review</p>
-  <p><span class="cat">Go-to-Market</span> &mdash; Live product demos, cold outreach at scale, HubSpot, LinkedIn Sales Navigator, GDPR-sensitive enterprise conversations</p>
+  <p><span class="cat">Customer Education</span> &mdash; Onboarding flow design, tutorial and walkthrough video production (script &rarr; record &rarr; edit), help-center authoring, tone and voice standards, Loom, CleanShot</p>
+  <p><span class="cat">Go-to-Market</span> &mdash; Live product demos through to close, contract execution (DocuSign), discount policy design, cold outreach at scale, HubSpot, LinkedIn Sales Navigator, GDPR-sensitive enterprise conversations</p>
 </section>
 
 <section>

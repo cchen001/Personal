@@ -107,3 +107,27 @@ Discipline matters more than volume. These were tempting and are not defensible 
 - **Deflection rate / CSAT improvement.** CSAT capture was only merged in Jul 2026 and 15 Jan 2026 notes "resolution rates remain low." There is no clean before/after. Leave it out.
 - **Ticket volume reduction.** Plausible but never measured end to end in the journals.
 - **"20% boost in customer satisfaction" (Ajinomoto, 2018)** and **"30% engagement improvement."** These are on your old CV with no supporting source. I kept the 20% (it was already public) and dropped the 30%. If either is challenged and you cannot source it, say so plainly — a candidate who retracts a number cleanly is more trustworthy than one who defends it vaguely.
+
+---
+
+## Bullets 7–8 — onboarding, customer education, commercial surface
+
+Added after Jade correctly flagged that the first pass under-weighted this stream.
+
+| Claim | Date | Journal evidence |
+|---|---|---|
+| No onboarding docs existed; built from scratch | 23 Nov 2025 | "we didn't really have any onboarding documents, so I have to kind of set up the bare bones first, so I'm rewriting the onboarding document as I progress" |
+| Three-node onboarding flow plus pricing node | 12 Dec 2025 | "Broke onboarding into 3 main nodes, plus an additional pricing-related node" |
+| Designed Fin as onboarding/CSM function | 25 Nov & 10 Dec 2025 | "Begin designing a structured onboarding system for FIN… clear, guided steps and educational support features"; "onboarding FIN AI agent to handle Customer Success Manager functions" |
+| HubSpot integration tutorial | 29–30 Jan 2026 | "Create a video tutorial to walk through the HubSpot integration" → "I finished the integration tutorial for HubSpot." |
+| Clay integration videos | 15 Dec 2025 | "started recording the integration videos for Clay, which is a bit more complicated" |
+| In-app onboarding video, full production | 22 Dec 2025 | "creating and editing a vertical onboarding video for Intercom (adding subtitles, images, and animations)" — approved by JP |
+| Recurring-export walkthrough, reshot for quality | 2–4 Mar 2026 | "Recorded the recurring export walkthrough video" → "Reshot the video… wasn't happy with the result, so shot it again." |
+| Loom for marketing/outreach | 9 Feb & 23 Mar 2026 | one-click export-to-integration walkthrough; 3-minute outreach Loom |
+| Trained a delegate | 30 Jan 2026 | "I continue to delegate some of the tasks… to Francine… I have recorded a video and make sure everything is set up on her end." |
+| Tone handbook ownership | 9 Jan & 28 Aug 2026 | "consolidated rules… into a single rule set: one-to-one tone, no marketing language, no assumptions about memory"; "Reviewed an external support-writing toolkit and rejected it — it teaches exactly the robotic voice we ban." |
+| Demos through to close, incl. GDPR-skeptical enterprise | Oct 2025 – Mar 2026 | multiple; 21 Jan 2026: "a demo with a client who is very skeptical… GDPR compliance concerns" |
+| Discount policy design | 30 Mar 2026 | "$299/mo threshold and two-route logic" |
+| Machine-readable defect feed for engineering | 31 Jul 2026 | "Specced and published a machine-readable, defect-shaped feed so engineering's AI can triage signal without opening conversations, one record per signature rather than one per customer." |
+
+**The framing that came out of this:** you were not a support hire who took on projects. You were the entire customer-facing function — support, onboarding, education, demos, and the product-feedback loop — and then you built the system that carries most of it. Use that sentence.

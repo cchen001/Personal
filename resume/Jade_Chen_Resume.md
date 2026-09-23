@@ -2,14 +2,14 @@
 
 chiehjadechen@gmail.com · +1 437 660 2419 · [linkedin.com/in/jade-chieh-chen](https://www.linkedin.com/in/jade-chieh-chen/)
 
-**AI Support Engineer — Customer Operations → Production AI Systems**
-*I take support functions that run on people and rebuild them as systems that run themselves, safely.*
+**AI Support Engineer — The Whole Customer-Facing Function, Then the System That Runs It**
+*Sole support, onboarding, education and demos for a B2B SaaS — then the production AI agent that handles most of it. I still work the queue every morning.*
 
 ---
 
 ## SUMMARY
 
-Support operator turned builder. Over 14 months at a B2B data SaaS I took a manual queue that spiked to 400–500 tickets a day and replaced it with a production AI agent that triages, answers, and executes refunds, credits and cancellations under hard authorization ceilings — specced, evaluated, deployed to AWS, and audited weekly by me. Eight years of client-facing sales and CX sit underneath the engineering, which is why the agent's answers sound like a person and its money guardrails were written by someone who has personally had to refund an angry customer.
+For fourteen months I have been the entire customer-facing function at a B2B data SaaS: support, onboarding, customer education, live demos and the product-feedback loop into engineering, alone. Then I built the production AI agent that now carries most of it — knowledge base, eval harness, AWS deployment, and autonomous refunds, credits and cancellations under hard authorization ceilings. Eight years of client-facing sales sit underneath the engineering, which is why the agent's answers sound like a person and its money guardrails were written by someone who still works the queue it serves.
 
 ---
 
@@ -17,7 +17,7 @@ Support operator turned builder. Over 14 months at a B2B data SaaS I took a manu
 
 ### AI Support Engineer — Evaboot
 **Remote · Jul 2025 – Present**
-*B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole owner of the support function | SMB to Enterprise*
+*B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole customer-facing hire: support, onboarding, education, demos | SMB to Enterprise*
 
 - **Built and shipped the company's production AI support agent end to end** — knowledge base, retrieval, eval harness, AWS deployment, live audit. New users now route to it by default, and it executes refunds, credits, cancellations and invoice voids autonomously under typed authorization ceilings (refund ≤ $29, credit ≤ 200), with idempotency keys, a verified action ledger and a weekly audit against what each customer actually asked for.
 - **Cut median customer wait to 3.3 staffed hours** by retiring a two-hour human monitoring window for a 24-hour automated cycle plus a two-hourly queue digest that reports itself into team chat — the first support signal that reaches a person without anyone fetching it. Drove a dogfood inbox from 630 active threads to 120 and cleared the owed queue to zero on repeat cycles.
@@ -25,7 +25,9 @@ Support operator turned builder. Over 14 months at a B2B data SaaS I took a manu
 - **Gated every agent change behind a golden eval**: a 114-case regression suite scored by 50 draft and 50 judge subagents through a deterministic scorer (hard rules 100%, soft 90%); 603 tests green on the triage layer, which is barred from touching money by a test rather than a comment.
 - **Recovered revenue and closed billing leaks hands-on**: built and submitted evidence on 19 disputes across 10 customers (~$1,070 + €49) with zero failures — 21 submissions in 15 minutes once the process was systematized — and executed verified money batches (8 refunds / $293.97; a later run of $425 + €9 refunded and $99 collected) against a live reconciled ledger.
 - **Found the silent failures no dashboard was reporting**: only 4 of ~296 support emails were reaching the ticketing system (a 30-day blind spot), closed-thread counts read 1 against 212 real, and published reply-time medians ran ~3x optimistic on a wrong staffed-day assumption. Archived 18,065 conversations and ~5,300 attachments to S3 ahead of a seat sunset with zero fetch failures.
-- **Ran the function solo through every incident** — Chrome Web Store delisting, recurring export failures, 400–500 ticket spikes — while carrying live demos, contract execution (including a 1M-credit deal via DocuSign), discount policy, and outbound campaigns at ~3,000 emails/week.
+- **Built the onboarding and customer-education function from nothing** — no onboarding documentation existed when I arrived. Designed the flow (three guided nodes plus pricing), wrote the material, and produced the tutorial library end to end from script to final edit: HubSpot and Clay integrations, recurring-export walkthroughs, and in-app onboarding video. Authored the tone handbook that every human and agent reply is now written against, and trained a delegate onto part of the queue.
+- **Carried the commercial surface alone alongside it** — live demos through to close, including GDPR-skeptical enterprise buyers; contract execution (1M-credit deal via DocuSign); discount policy design ($299/mo threshold, two-route logic); outbound campaigns at ~3,000 emails/week. Became engineering's product-defect channel, publishing a machine-readable triage feed so they could action signal without opening conversations — one record per defect signature rather than one per affected customer.
+- **Held all of it through every incident** — Chrome Web Store delisting, recurring export failures, 400–500 ticket spikes — as the only customer-facing person in the company.
 
 ### SaaS Sales Executive — All Funeral Services
 **New York, USA · Jan 2025 – Jul 2025**
@@ -61,7 +63,8 @@ Support operator turned builder. Over 14 months at a B2B data SaaS I took a manu
 **Billing & Revenue Ops** — Stripe (disputes, refunds, invoices, subscriptions, idempotency), chargeback evidence automation, dispute-prevention policy, DocuSign contracts, discount policy design
 **Cloud & Infrastructure** — AWS (EC2, S3, Lambda, SES, IAM, Secrets Manager), Cloudflare Pages, Supabase, Astro Starlight, Bubble, n8n, webhooks and REST integrations
 **Engineering** — Python, SQL, SQLite/FTS5, React, Git/GitHub (spec → plan → review → merge), pytest, automated code review gates, security review
-**Go-to-Market** — Live product demos, cold outreach at scale, HubSpot, LinkedIn Sales Navigator, GDPR-sensitive enterprise conversations
+**Customer Education** — Onboarding flow design, tutorial and walkthrough video production (script → record → edit), help-center authoring, tone and voice standards, Loom, CleanShot
+**Go-to-Market** — Live product demos through to close, contract execution (DocuSign), discount policy design, cold outreach at scale, HubSpot, LinkedIn Sales Navigator, GDPR-sensitive enterprise conversations
 
 ---
 
