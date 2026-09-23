@@ -22,9 +22,11 @@ In job-posting vocabulary, **"Agent" = frontline ticket handler**. The posting w
 
 ---
 
-## Track A — primary: Forward Deployed Engineer / AI Solutions Engineer
+## Track A — selective: Forward Deployed Engineer / AI Solutions Engineer
 
-**Apply here first.** This is the one job category where your *entire* resume is an asset rather than half-dead weight.
+*Re-weighted after the technical-credibility section below — read that first. Apply here selectively, screening each posting's interview process.*
+
+**Where it fits.** This is the one job category where your *entire* resume is an asset rather than half-dead weight.
 
 FDE and AI-solutions roles want someone who can sit with a customer, work out what they actually need, then go build and ship it in production — usually alone, usually fast, usually without a spec handed down. That is a near-exact description of your last fourteen months, and the eight years of sales before it is the part most engineering candidates cannot fake.
 
@@ -41,18 +43,18 @@ Everywhere else, half your resume is a liability. Pure engineering roles discoun
 
 **Headline to use:** the shipping one in the resume, unchanged.
 
-**The bar:** you will not clear every one of these. Some will want years of production software engineering and a CS degree. Apply anyway — the filter costs you nothing and your profile is unusual enough to get pulled from the pile by the right reader.
+**The bar, honestly:** many of these run a live code-reading screen. Check the interview process before applying — most companies publish it, and a recruiter will tell you if you ask. Where it is customer-outcome and implementation focused, apply. Where it is engineering-fundamentals focused, skip it; failing that screen badly costs more than not applying.
 
 ---
 
-## Track B — volume: Support Operations Manager / Lead
+## Track B — primary: Support Operations / AI Operations Lead
 
-**Apply here in parallel, not instead.** Bigger market, lower bar for you, lower ceiling.
+**This is now your main track.** Bigger market, and what you did is the entire job description.
 
 These roles own support tooling, workflows, metrics and automation — not the queue itself. You would clear this bar comfortably; the risk is being hired to *run* a support org rather than build systems, which over two years walks you back toward where you started.
 
 **Search these exact strings:**
-`Support Operations Manager` · `Support Operations Lead` · `CX Operations Manager` · `Technical Support Manager` · `Head of Support` (at companies under ~80 people) · `Support Automation Lead`
+`Support Operations Manager` · `Support Operations Lead` · `AI Operations Lead` · `AI Implementation Specialist` · `Automation Specialist` · `CX Operations Manager` · `Head of Support` (companies under ~80 people) · `Support Automation Lead`
 
 **Headline to use:** §9 of `RESUME_AUDIT.md`, the Head-of-Support alternate.
 
@@ -76,14 +78,14 @@ You do not have enough information to reason your way to the answer from your de
 
 | | |
 |---|---|
-| **Week 1** | 5 applications to Track A. 5 to Track B. Same resume both times — only the headline changes, and both versions are already written. |
+| **Week 1** | 7 applications to Track B, 3 to Track A. Same resume both times — only the headline changes. |
 | **Week 2** | Same again. 20 total. No tailoring beyond the headline swap and the §7 method if a JD is worth it. |
 | **Measure** | Reply rate per track. Nothing else. Not how you felt about each application. |
 
 **Decision rules, set now so you don't renegotiate them later:**
 
-- **Track A gets replies** → go deeper there, drop Track B to background.
-- **Only Track B gets replies** → take a Track B role at a company where you'd be building. Track A again in a year with a public artifact behind you.
+- **Track B gets replies** → expected. Go deeper, and screen hard for roles where you would still be building rather than only managing.
+- **Track A also gets replies** → take the interviews, and prepare for a code-reading screen specifically.
 - **Neither gets replies** → the problem is not the title. It's that nobody can verify you. Write the authorization-model piece (§10 of the audit) and re-run.
 
 Twenty applications is the cost of buying an answer you cannot reason your way to. It is also less work than one more week of deciding.
@@ -124,60 +126,50 @@ Not a problem, but plan it rather than improvising at offer stage.
 
 ---
 
-## "I can't really code, I just use AI" — the evidence says otherwise
+## "I can't really code" — taken at your word
 
-Worth settling, because it will decide how you interview.
+I previously argued from your journals that you *can* read code. You said no, twice. Believing you, and here is the correction, because the distinction matters for where you apply.
 
-### What the journals actually record
+### What I got wrong
 
-Reading code is not typing code. It is the ability to look at a system and tell whether it does what it claims. Your own entries, in your own words:
+I conflated **verification** with **comprehension**.
 
-- **4 Sep 2026** — "Six of the spec's references to our own code were wrong, and surfaced only by checking each by hand; it named functions as they ought to have been called rather than as they are." You checked a spec against the real codebase, function by function, and found six errors. That is reading code.
-- **12 Aug 2026** — "Four existing tests were asserting the buggy behavior, so everything looked green while customers stayed invisible." This is not a beginner observation. Recognising that the *test suite itself* encodes the bug is a senior instinct; plenty of working engineers never develop it.
-- **12 Aug 2026** — "One silent-drop bug passed all 531 tests and was only caught in review."
-- **7 Sep 2026** — "Went through Robin's findings, confirmed all of them and found one more." You audited an engineer's security review and found something he missed.
-- **9 Jul 2026** — "The fix initially appeared to break 13 tests — checking the same suite on the untouched base showed them all pre-existing." You isolated a regression against a baseline instead of trusting the failure.
-- **13 Aug 2026** — "A clever safety guard turned out to be the bug; the simple version was correct."
-- **3 Sep 2026** — "The reader exposed a live defect in how we read payment objects, which had to be fixed before anything built on it could be trusted."
-- **11 Aug 2026** — diagnosed a build that silently shipped bundles importing uncopied modules, aliased imports included.
+What your journals prove is verification: checking whether a claim matches reality. Do these function names actually exist in the repo (4 Sep, six spec references wrong). Did these thirteen tests also fail on the untouched branch (9 Jul). Is the closed-thread count 1 or 212 (14 Sep). Did the message actually arrive, or did a green status line only say it did (4 Sep). Were these tests asserting the buggy behaviour (12 Aug).
 
-Someone who cannot read code does not produce this record. They ship what the model hands them and find out in production. You have fourteen months of catching the model being wrong — including in your own plans ("Four defects in my own plan surfaced during the build, including a test that could never have passed").
+All of that can be done without understanding what the code does line by line. I read it as comprehension because it was the case I wanted to make. You know your own limits better than I can infer them.
 
-### The real skill, named properly
+### What this changes
 
-The scarce thing in AI-assisted engineering is not typing the characters. It is **knowing when the output is wrong**. That judgment is the entire difference between someone who ships working systems and someone who ships plausible-looking wreckage, and it is the thing you have been doing daily since April.
+**The title.** Dropped "Engineer." The resume now says **Founding Support Lead**. It claims ownership and shipping, not code fluency, and it will not collapse under a technical screen.
 
-### The gap that is real
+**The skills line.** "Python, SQL, React, pytest" implied fluency you do not claim. It now reads *"Python / SQL / SQLite / React codebases worked AI-assisted"* — accurate, still substantial, and it survives the follow-up question.
 
-Do not over-correct. There are things you probably cannot do today:
+**Track A needs re-weighting.** Most Forward Deployed and Solutions Engineer roles run a technical screen — read this code, explain what it does, extend it. If you cannot do that, you will fail those interviews, and failing them badly is worse than not applying. So:
 
-- Pass a live whiteboard or LeetCode screen.
-- Write non-trivial code from a blank file, quickly, with no assistance.
-- Read a large unfamiliar codebase at speed.
-- Reason fluently about algorithmic complexity.
+- **Apply to Track A selectively**, where the posting emphasises customer outcomes, implementation and automation rather than software engineering fundamentals. Read the interview process before applying; many list it.
+- **Move Track B to primary.** `Support Operations Manager`, `Support Operations Lead`, `AI Operations Lead`, `Head of Support`, `Support Automation Lead`. Here what you did is the whole job and no one will ask you to read a stack trace under a timer.
+- **Add a track I underrated:** `AI Operations`, `AI Implementation Specialist`, `Automation Specialist`, `AI Program Manager`. These are growing fast, they are explicitly about directing AI systems to do real work, and they screen on judgment and shipping, not on code.
 
-These are real and they will disqualify you from some roles. **That is fine.** Do not apply to companies that screen on them — not because you are unworthy, but because the screen does not measure what you are good at. The Track A roles were chosen partly for this reason: FDE and solutions work is judged on shipping and customer judgment, not on inverting a binary tree under a timer.
+### What you actually are, stated accurately
 
-### Answer for the interview, when they ask
+Not an engineer. Also not "someone who just uses AI."
 
-They will ask. Answer it flatly, without apology:
+You are someone who can take a business problem, decompose it into something an AI system can build, put review gates around it so the output is checked rather than trusted, deploy it into production where real money moves, and then catch it when it is wrong — because you are the one working the queue it serves.
 
-> "I work AI-assisted, and I'm deliberate about it — spec, plan, review gates, then merge. The reviews catch real defects: a fail-closed contract that broke on a null, a regex bug in an outcome parser caught before any code was written, a silent-drop bug that had passed all 531 tests. I read every diff before it lands, and I'm the one who has to live with it in the queue the next morning. I'm not going to claim I'd pass an algorithms screen. I'd say what I actually am is someone who can tell when the output is wrong."
+That is a real and currently scarce skill set. It has no settled job title yet, which is exactly why this conversation has been hard. It is not a lesser version of engineering; it is a different function that happens to produce working software.
 
-The apology is what loses the room, not the method. Being effective with AI tooling is a hiring criterion now, not a confession.
+The proof is not that you understand the code. The proof is that **the system is live, it moves money, and it has not hurt anyone** — because you built ceilings, a ledger, an audit and an eval gate around it. That judgment is what you are selling.
 
-### Your own test, if you want the answer first-hand
+### If you want to close the gap
 
-Do not take my reading of your journals for it. Settle it yourself, in thirty minutes, today:
+Optional, and genuinely learnable. Not a prerequisite for applying — do it in parallel, not first.
 
-1. Open your support repo. Pick a file you have not touched in a month.
-2. Find a function of roughly thirty lines that you did not personally write in that session.
-3. With no AI open, write down in plain English: what it does, what input would break it, and what a test for it should assert.
-4. *Then* ask the model and compare.
+Thirty minutes a day, twelve weeks, on your own codebase rather than a course:
 
-**Decision rule, set before you start:**
+1. **Weeks 1–4, reading only.** Each day open one file you already own. Pick one function. Ask your AI to explain it line by line, then close the AI and write the explanation in your own words. You are not learning to write; you are learning to follow control flow.
+2. **Weeks 5–8, prediction.** Before running anything, write down what you expect it to do. Then run it. The gap between prediction and result is the entire lesson.
+3. **Weeks 9–12, small unaided changes.** Change a constant, add a log line, fix a message string. Ship it. Build the loop of touching code and nothing exploding.
 
-- **Mostly right** → the claim is false, "Engineer" stands, and you stop relitigating this. You already ran a harder version of this test on 4 September and passed it.
-- **Lost in the control flow** → the gap is real, it is roughly three focused months of work, and it is a skill, not an identity. Use `Founding Support Lead` in the meantime and keep going.
+Python is a reasonable first language and it is what your codebase is in. Twelve weeks of this puts you above the bar for reading, which is the part that matters for your work. Writing fluently is a longer road and you may never need it.
 
-Either result is useful. Continuing to wonder is not.
+Do not let this block the twenty applications. The applications go out either way.
