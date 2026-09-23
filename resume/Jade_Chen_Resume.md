@@ -2,7 +2,7 @@
 
 chiehjadechen@gmail.com · +1 437 660 2419 · [linkedin.com/in/jade-chieh-chen](https://www.linkedin.com/in/jade-chieh-chen/)
 
-**AI Support Engineer — The Whole Customer-Facing Function, Then the System That Runs It**
+**Founding Support Engineer — Customer Operations → Production AI Systems**
 *Sole support, onboarding, education and demos for a B2B SaaS — then the production AI agent that handles most of it. I still work the queue every morning.*
 
 ---
@@ -15,7 +15,7 @@ For fourteen months I have been the entire customer-facing function at a B2B dat
 
 ## EXPERIENCE
 
-### AI Support Engineer — Evaboot
+### Founding Support Engineer — Evaboot
 **Remote · Jul 2025 – Present**
 *B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole customer-facing hire: support, onboarding, education, demos | SMB to Enterprise*
 

@@ -203,7 +203,7 @@ A **public artifact**. The single highest-leverage thing you could do this month
 
 ## Open items — your calls, not mine
 
-1. **Job title at Evaboot.** The journals never state an official one; I used *AI Support Engineer* because it describes the work. **Check what Evaboot would confirm in a reference call.** If they would only verify "Customer Support Specialist," use that title and let the bullets do the work — an under-titled resume with these bullets reads as *more* credible, not less. Never put a title on paper that a reference will contradict.
+1. **Job title at Evaboot.** The journals never state an official one; the resume currently says *Founding Support Engineer*. Do **not** ask JB to confirm it — you are searching while employed and that question is a signal you cannot retract. Read your own contract instead; see the title and reference section in `TARGET_ROLES.md`. If the contract says something generic, keep the generic title and let the headline and meta line carry the scope. An under-titled resume with these bullets reads as *more* credible, not less.
 2. **All Funeral Services end date.** Your old CV said "Jan 2025 – Present"; Evaboot starts Jul 2025 and you confirmed no overlap. I wrote **Jan 2025 – Jul 2025**. Correct it if that's wrong.
 3. **Location line.** Your old CV had none, and I did not invent one. Your number is Toronto (+1 437) but the journals put you on an Asia-Pacific schedule. Add a location or "Remote (UTC+8)" — recruiters filter on it and its absence is read as evasion.
 4. **Target confirmation.** This document is built for AI/Support Automation Engineering. Say the word and I'll produce the Head-of-Support or Solutions-Engineer cut instead — it's a re-weighting, not a rewrite.

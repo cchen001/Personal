@@ -92,6 +92,32 @@ Twenty applications is the cost of buying an answer you cannot reason your way t
 
 ## The one thing to do before Week 1
 
-Confirm your Evaboot title with JB. One message. Everything above assumes you know what a reference call would say, and right now you don't.
+**Do not ask JB anything.** I said earlier to confirm your title with him — that was wrong for your situation and you were right to stop me. You are searching while employed at a six-person company. One question about your job title from someone who has never asked before is a signal, and you cannot take it back.
 
-That's the only genuine blocker on this list. It takes five minutes and it is the kind of small concrete step that is worth doing *today*, before the twenty applications feel large.
+**Read your own contract instead.** You have the paperwork — you emailed Robin and JP about updated contract terms in December 2025. Whatever title appears on your offer letter, contract or invoices is the title that exists on paper. That takes ten minutes, tips off nobody, and answers the question completely.
+
+Three outcomes:
+
+- **Contract names a title** → use it, or use it with the scope framing in the meta line. Do not put a different one on the resume.
+- **Contract names nothing** (common at this size, especially on a contractor arrangement) → there is nothing to contradict. Pick the descriptive title and make LinkedIn match it exactly.
+- **Contract names something generic** ("Customer Support") → keep it as the title line and let the headline and the meta line carry "sole customer-facing hire, built the function from nothing." The framing does not need to live in the job title. This is the safest option and it costs you almost nothing.
+
+**Whatever you choose, LinkedIn must match it before you apply.** Recruiters open both. A mismatch is the one discrepancy that reads as dishonesty rather than informality.
+
+---
+
+## References, since Evaboot is off the table
+
+Not a problem, but plan it rather than improvising at offer stage.
+
+**On applications:** "References available on request. I am currently employed and ask that my present employer not be contacted." This is completely standard, no recruiter will blink, and it is not a red flag.
+
+**Who you can actually use:**
+- **Anyone who has *left* Evaboot.** Departed colleagues can speak to your work with no exposure to current management. Guti left in August 2025 and would have seen the export-crisis period.
+- **All Funeral Services** — recent, you have already left, and it covers Jan–Jul 2025.
+- **Globalfaces, Yutian, PERSOLKELLY** — older but real, and Yutian is where you led a team.
+- Avoid Robin, Phil, Gautier and JB while you are still there.
+
+**Employment verification is a separate thing from a reference**, and it is the one to actually plan around. Some employers run a background check after an offer that verifies dates and title with the company. That happens post-offer, so the exposure comes at the point where you have leverage — but it is exactly why the title has to match your contract rather than be aspirational.
+
+**This makes the public write-up more important, not less.** When you cannot offer your current employer as a reference, evidence you can hand someone directly becomes the substitute. A sanitized one-page piece on the agent's authorization model — the $29 canary, the typed action tool, why the triage layer is test-barred from money — lets a hiring manager verify your thinking without phoning anyone. That is now the highest-leverage item on your list, ahead of any further resume edit.
