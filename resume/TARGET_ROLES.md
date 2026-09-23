@@ -121,3 +121,63 @@ Not a problem, but plan it rather than improvising at offer stage.
 **Employment verification is a separate thing from a reference**, and it is the one to actually plan around. Some employers run a background check after an offer that verifies dates and title with the company. That happens post-offer, so the exposure comes at the point where you have leverage — but it is exactly why the title has to match your contract rather than be aspirational.
 
 **This makes the public write-up more important, not less.** When you cannot offer your current employer as a reference, evidence you can hand someone directly becomes the substitute. A sanitized one-page piece on the agent's authorization model — the $29 canary, the typed action tool, why the triage layer is test-barred from money — lets a hiring manager verify your thinking without phoning anyone. That is now the highest-leverage item on your list, ahead of any further resume edit.
+
+---
+
+## "I can't really code, I just use AI" — the evidence says otherwise
+
+Worth settling, because it will decide how you interview.
+
+### What the journals actually record
+
+Reading code is not typing code. It is the ability to look at a system and tell whether it does what it claims. Your own entries, in your own words:
+
+- **4 Sep 2026** — "Six of the spec's references to our own code were wrong, and surfaced only by checking each by hand; it named functions as they ought to have been called rather than as they are." You checked a spec against the real codebase, function by function, and found six errors. That is reading code.
+- **12 Aug 2026** — "Four existing tests were asserting the buggy behavior, so everything looked green while customers stayed invisible." This is not a beginner observation. Recognising that the *test suite itself* encodes the bug is a senior instinct; plenty of working engineers never develop it.
+- **12 Aug 2026** — "One silent-drop bug passed all 531 tests and was only caught in review."
+- **7 Sep 2026** — "Went through Robin's findings, confirmed all of them and found one more." You audited an engineer's security review and found something he missed.
+- **9 Jul 2026** — "The fix initially appeared to break 13 tests — checking the same suite on the untouched base showed them all pre-existing." You isolated a regression against a baseline instead of trusting the failure.
+- **13 Aug 2026** — "A clever safety guard turned out to be the bug; the simple version was correct."
+- **3 Sep 2026** — "The reader exposed a live defect in how we read payment objects, which had to be fixed before anything built on it could be trusted."
+- **11 Aug 2026** — diagnosed a build that silently shipped bundles importing uncopied modules, aliased imports included.
+
+Someone who cannot read code does not produce this record. They ship what the model hands them and find out in production. You have fourteen months of catching the model being wrong — including in your own plans ("Four defects in my own plan surfaced during the build, including a test that could never have passed").
+
+### The real skill, named properly
+
+The scarce thing in AI-assisted engineering is not typing the characters. It is **knowing when the output is wrong**. That judgment is the entire difference between someone who ships working systems and someone who ships plausible-looking wreckage, and it is the thing you have been doing daily since April.
+
+### The gap that is real
+
+Do not over-correct. There are things you probably cannot do today:
+
+- Pass a live whiteboard or LeetCode screen.
+- Write non-trivial code from a blank file, quickly, with no assistance.
+- Read a large unfamiliar codebase at speed.
+- Reason fluently about algorithmic complexity.
+
+These are real and they will disqualify you from some roles. **That is fine.** Do not apply to companies that screen on them — not because you are unworthy, but because the screen does not measure what you are good at. The Track A roles were chosen partly for this reason: FDE and solutions work is judged on shipping and customer judgment, not on inverting a binary tree under a timer.
+
+### Answer for the interview, when they ask
+
+They will ask. Answer it flatly, without apology:
+
+> "I work AI-assisted, and I'm deliberate about it — spec, plan, review gates, then merge. The reviews catch real defects: a fail-closed contract that broke on a null, a regex bug in an outcome parser caught before any code was written, a silent-drop bug that had passed all 531 tests. I read every diff before it lands, and I'm the one who has to live with it in the queue the next morning. I'm not going to claim I'd pass an algorithms screen. I'd say what I actually am is someone who can tell when the output is wrong."
+
+The apology is what loses the room, not the method. Being effective with AI tooling is a hiring criterion now, not a confession.
+
+### Your own test, if you want the answer first-hand
+
+Do not take my reading of your journals for it. Settle it yourself, in thirty minutes, today:
+
+1. Open your support repo. Pick a file you have not touched in a month.
+2. Find a function of roughly thirty lines that you did not personally write in that session.
+3. With no AI open, write down in plain English: what it does, what input would break it, and what a test for it should assert.
+4. *Then* ask the model and compare.
+
+**Decision rule, set before you start:**
+
+- **Mostly right** → the claim is false, "Engineer" stands, and you stop relitigating this. You already ran a harder version of this test on 4 September and passed it.
+- **Lost in the control flow** → the gap is real, it is roughly three focused months of work, and it is a skill, not an identity. Use `Founding Support Lead` in the meantime and keep going.
+
+Either result is useful. Continuing to wonder is not.
