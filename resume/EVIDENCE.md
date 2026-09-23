@@ -131,3 +131,42 @@ Added after Jade correctly flagged that the first pass under-weighted this strea
 | Machine-readable defect feed for engineering | 31 Jul 2026 | "Specced and published a machine-readable, defect-shaped feed so engineering's AI can triage signal without opening conversations, one record per signature rather than one per customer." |
 
 **The framing that came out of this:** you were not a support hire who took on projects. You were the entire customer-facing function — support, onboarding, education, demos, and the product-feedback loop — and then you built the system that carries most of it. Use that sentence.
+
+---
+
+## The Intercom replacement — the lead claim
+
+Added after Jade flagged that earlier drafts framed this as "configured Intercom Fin" and "migrated the help center." It was a full vendor replacement, and it is the strongest thing on the resume.
+
+| Claim | Date | Journal evidence |
+|---|---|---|
+| Full stack built on AWS | 16 May 2026 | "stand up the full support stack (widget + admin inbox + backend)… DynamoDB, Lambdas, API Gateways, Cognito, S3… a human can click through widget → DDB → admin inbox → reply → widget" |
+| Deployed to real AWS, proven end to end | 21 May 2026 | "Migrated the dogfood support backend onto real AWS in eu-central-1, deploying the Python Lambdas, DynamoDB tables, two Cognito pools, and HTTP plus WebSocket API Gateways, and proved the flow end-to-end from widget to router to agent." |
+| Multi-conversation threading | 22 May 2026 | "an Intercom-style multi-conversation widget model… per-conversation rows, user-partitioned keys, auto-reopen, hybrid state migration" |
+| Email channel replacing Intercom's | 26–29 May 2026 | SES inbound/outbound channel; "Closed out the SES/email-channel milestone end to end" |
+| Intercom sunsets at cutover | 5 Jun 2026 | "Intercom dedup is transitional (sunsets at backend cutover)" |
+| Stripe back-office panel inside the inbox | 12 Jun 2026 | "Built the read-only live Stripe panel for the inbox MVP… 73 frontend + 167 backend tests green" |
+| **Cutover executed** | **31 Jul 2026** | "Closed the spec through further Codex rounds and built the transcript importer with a ledger and a rollback path… **Ran the import and flipped the widget on for every dashboard user through the feature flag.**" |
+| Design fork settled | 30 Jul 2026 | "Dropped the holdout-list model in favour of flipping every user at once" |
+| Three rails unified | 10 Aug 2026 | "Rebuilt 68 triage cards across Intercom, email, and widget" |
+| Intercom seats retired | 10 Aug 2026 | "Landed the cold-archive tool ahead of the seat sunset… 18,065 conversations… uploaded to S3" |
+| Widget shipped to production | 10 Aug 2026 | "Widget PR #9 shipped through the Cloudflare Pages deploy" |
+| Inbox/widget in ongoing production use | 19 Aug 2026 | "Shipped markers that tell AI replies apart from human ones so the team can audit at a glance… fixed an attachment error" |
+
+### Self-improving loop
+
+| Claim | Date | Journal evidence |
+|---|---|---|
+| Designed from scratch | 22–23 Jun 2026 | "*Agent self-learning loop*: New design work (no spec yet) — start at brainstorm." |
+| Weekly cycle running | 24 Jul 2026 | "*Weekly Agent Improvement Loop*: Run the reporting defect queue weekly… persist reply mode plus retrieved KB article ids to unblock the deferred model-judged quality" |
+| Live defects feed it | 3 & 10 Aug 2026 | "Work cutover and email-rail stragglers as they surface, feed defects into the improvement loop." |
+| Defects become eval cases | 3 Aug 2026 | "An existing golden case did not prevent the defect it was written for. New cases were parked with a resume trigger rather than added to a suite about to change." |
+
+### Two numbers I could NOT source — you must be able to defend these
+
+| Claim | Status |
+|---|---|
+| **~$100K/year saved in tooling** | Not in the journals. It is your figure and your company's data, so it stays on the resume — but be ready to break it down: Intercom seats × price, Fin resolution charges, the Pro add-on you assessed at $99+/month, minus what AWS now costs you. An interviewer who works in support tooling *will* ask, and "roughly" is a fine answer only if you can show the arithmetic. |
+| **~50% cut in support handling time** | Not directly stated. The journals support: reply time down ~30% from the React artifact (3 Mar 2026); a two-hour monitoring window replaced by a 24-hour cycle; median wait 3.3 staffed hours; inbox 630 → 120. If your 50% comes from a measurement you ran, keep it and cite the basis. If it is an estimate, say "roughly halved" in conversation and let the 3.3-hour median and the 630 → 120 carry the written claim. |
+
+Do not let either number be the thing that unravels an otherwise airtight page. Everything else here has a date.
