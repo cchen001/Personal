@@ -76,11 +76,12 @@
   .skills .cat { font-weight: 700; }
   .oneline { margin: 0 0 4px; }
   @media print {
-    body { padding: 0; font-size: 9.7pt; }
+    body { padding: 0; font-size: 9.4pt; }
     a { color: inherit; }
     h2 { page-break-after: avoid; }
+    li { orphans: 2; widows: 2; }
   }
-  @page { margin: 0.5in 0.55in; }
+  @page { margin: 0.45in 0.5in; }
 </style>
 </head>
 <body>
@@ -91,13 +92,13 @@
     chiehjadechen@gmail.com &middot; +1 437 660 2419 &middot;
     <a href="https://www.linkedin.com/in/jade-chieh-chen/">linkedin.com/in/jade-chieh-chen</a>
   </p>
-  <p class="headline">Founding Support Lead — Customer Operations &amp; Production AI Systems</p>
-  <p class="subheadline">Sole support, onboarding, education and demos for a B2B SaaS &mdash; then the AI system that handles most of it. I still work the queue every morning.</p>
+  <p class="headline">AI Support Operations &amp; Conversational Design</p>
+  <p class="subheadline">Designed the conversation, shipped the agent, built the evaluation that proves it works &mdash; and still work the queue every morning.</p>
 </header>
 
 <section>
   <h2>Summary</h2>
-  <p class="summary">For fourteen months I have been the entire customer-facing function at a B2B data SaaS &mdash; support, onboarding, customer education, demos and the product-feedback loop into engineering, alone. Then I built the production AI agent that now carries most of it, including autonomous refunds and credits under hard authorization ceilings. Eight years of client-facing sales sit underneath, which is why the agent's answers sound like a person and its money guardrails were written by someone who still works the queue it serves.</p>
+  <p class="summary">Fourteen months as the sole customer-facing hire at a B2B SaaS, where I designed the conversation architecture for Intercom Fin across three successive roles, then built and shipped the production AI agent that now carries most of the queue &mdash; knowledge base, evaluation harness, escalation logic, and autonomous refunds and credits under hard authorization ceilings. I also built the resolution-tracking layer that measures whether the agent actually resolved anything, and authored the tone system every human and agent reply is written against. Eight years of client-facing work underneath, across the UK, Taiwan, Canada and a France-based team.</p>
 </section>
 
 <section>
@@ -108,15 +109,15 @@
       <p class="role-title">Founding Support Lead &mdash; Evaboot</p>
       <span class="role-dates">Jul 2025 &ndash; Present</span>
     </div>
-    <p class="role-meta">Remote &middot; B2B SaaS (LinkedIn Sales Navigator data extraction) | ~6-person team | Sole customer-facing hire | SMB to Enterprise</p>
+    <p class="role-meta">Remote (UTC+8) &middot; B2B SaaS, LinkedIn Sales Navigator data extraction | ~6-person team | Sole customer-facing hire | SMB to Enterprise</p>
     <ul>
-      <li><b>Built and shipped the company's production AI support agent end to end</b> &mdash; knowledge base, eval harness, AWS deployment, live audit. New users route to it by default, and it executes refunds, credits, cancellations and invoice voids autonomously under typed ceilings (refund &le; $29, credit &le; 200), with idempotency keys, a verified ledger and a weekly audit. Every change gates behind a 114-case eval suite; 603 tests green on the triage layer, which is barred from touching money by a test rather than a comment.</li>
-      <li><b>Cut median customer wait to 3.3 staffed hours</b>, retiring a two-hour human monitoring window for a 24-hour automated cycle plus a two-hourly queue digest that reports itself into team chat. Drove the working inbox from 630 active threads to 120 and cleared the owed queue to zero on repeat cycles.</li>
-      <li><b>Designed the knowledge layer from scratch</b> &mdash; a 15-category taxonomy over 120 articles with SQLite/FTS5 retrieval (skipping vector RAG as over-engineering at 15k words), and a help center rebuilt on Astro Starlight / Cloudflare Pages and migrated off Intercom: 118 articles, zero dead links, 134 images recovered before their CDN expired.</li>
-      <li><b>Recovered revenue and closed billing leaks</b> &mdash; evidence on 19 disputes across 10 customers (~$1,070 + &euro;49) with zero failures, 21 submissions in 15 minutes once systematized, plus verified money batches against a live reconciled ledger.</li>
-      <li><b>Found the silent failures no dashboard was reporting</b>: only 4 of ~296 support emails were reaching the ticketing system, closed-thread counts read 1 against 212 real, and published reply-time medians ran ~3x optimistic on a wrong staffed-day assumption. Archived 18,065 conversations to S3 ahead of a seat sunset with zero fetch failures.</li>
-      <li><b>Built the onboarding and customer-education function from nothing</b> &mdash; no documentation existed on arrival. Designed the flow, wrote the material, and produced the tutorial library script-to-edit (HubSpot and Clay integrations, recurring-export walkthroughs, in-app onboarding video). Authored the tone handbook every human and agent reply is written against.</li>
-      <li><b>Carried the commercial surface alongside it</b> &mdash; demos through to close including GDPR-skeptical enterprise buyers, contract execution (1M-credit deal), discount policy, ~3,000 emails/week outbound &mdash; and became engineering's defect channel via a machine-readable triage feed. Held all of it through a Chrome Web Store delisting and 400&ndash;500 ticket spikes as the only customer-facing person in the company.</li>
+      <li><b>Designed and shipped the production AI support agent end to end</b> &mdash; conversation architecture, knowledge base, retrieval, evaluation harness, AWS deployment, live audit. New users route to it by default. It executes refunds, credits, cancellations and invoice voids autonomously under typed ceilings (refund &le; $29 as a launch canary, credit &le; 200), with idempotency keys, a verified ledger and a weekly audit against what each customer actually asked for.</li>
+      <li><b>Designed the conversation architecture and the tone system behind it</b> &mdash; broke onboarding into three triggered nodes plus a pricing node, each with a defined entry condition and purpose, after scrapping a first design when the highly interactive model proved wrong for the platform. Configured Fin across three successive roles (support, onboarding, customer success), and authored a tone handbook of explicit rulings &mdash; reply visibility, capacity state, apology dating, professional register &mdash; not style preferences. Rejected an external support-writing toolkit that taught the robotic voice we ban, then traced our own bad tone to one upstream instruction and deleted it.</li>
+      <li><b>Built the evaluation loop and the resolution tracking that prove a change helped</b> &mdash; a 114-case golden suite scored by 50 draft and 50 judge subagents through a deterministic scorer (hard rules 100%, soft 90%), a fifteen-persona DeepEval run against a live agent constitution, and a data pool categorising every conversation as confirmed, assumed or abandoned mid-conversation, fed live by auto-close and CSAT hooks with a daily backfill sweep. 603 tests green on the triage layer, which is barred from touching money by a test rather than a comment.</li>
+      <li><b>Tuned escalation logic, fallbacks and guardrails ahead of a 24-hour automated cycle</b> &mdash; audited every escalation rule for effectiveness and disabled the majority; rewrote the human-handoff fallback with expectation-setting language. Median customer wait now 3.3 staffed hours, after finding published medians had been running ~3x optimistic on a wrong staffed-day assumption. Working inbox down from 630 active threads to 120, and the owed queue cleared to zero on repeat cycles.</li>
+      <li><b>Built the knowledge layer and the enablement that keeps customers independent</b> &mdash; a 15-category taxonomy over 120 articles with SQLite/FTS5 retrieval, maintained as the agent's live source; a help center rebuilt on Astro Starlight / Cloudflare Pages and migrated off Intercom (118 articles, zero dead links); and a tutorial library scripted, recorded and edited in-house covering HubSpot and Clay integrations, recurring exports and in-app onboarding.</li>
+      <li><b>Built the integrations and automation the agent runs on</b> &mdash; n8n workflows and Zapier automations, two real-time webhook listeners, an LLM chain returning structured JSON, a bearer-token JSON API client, and a documented MCP server whose live tool count I settled at 37 against two wrong internal figures &mdash; surfacing 20 undocumented tools that write to customers' own accounts.</li>
+      <li><b>Owned payments operations and the commercial surface alone</b> &mdash; Stripe disputes, chargebacks, refunds and subscriptions &mdash; evidence on 19 disputes across 10 customers (~$1,070 + &euro;49) with zero failures, 21 submissions in 15 minutes once systematized. Wrote the deletion and erasure policy, handled GDPR and PII boundaries, and confirmed every finding of an external security review plus one more. Ran demos through to close including GDPR-skeptical enterprise buyers, contract execution, and discount policy design &mdash; through a Chrome Web Store delisting and 400&ndash;500 ticket spikes, as the only customer-facing person in the company.</li>
     </ul>
   </div>
 
@@ -127,7 +128,8 @@
     </div>
     <p class="role-meta">New York, USA &middot; DeathTech SaaS | 100+ employees | Avg deal $20K</p>
     <ul>
-      <li>Promoted Lead Gen &rarr; Pre-Sales in 1 month, onto Account Management at 5; 80&ndash;100 cold calls/day booking 5&ndash;8 demos/week, supporting a first close inside 30 days against a typical 6-month cycle.</li>
+      <li>Promoted Lead Gen &rarr; Pre-Sales in 1 month and onto Account Management at 5, on initiative and speed through the funnel.</li>
+      <li>Ran discovery and product demos for SMB and mid-market buyers at 80&ndash;100 cold calls/day, booking 5&ndash;8 demos/week; supported a first close inside 30 days against a typical 6-month cycle.</li>
     </ul>
   </div>
 
@@ -136,9 +138,10 @@
       <p class="role-title">Senior Team Lead &mdash; Globalfaces Direct</p>
       <span class="role-dates">Mar 2024 &ndash; Dec 2024</span>
     </div>
-    <p class="role-meta">Toronto, Canada &middot; Nonprofit fundraising | 1,200 reps | Avg deal $2K</p>
+    <p class="role-meta">Toronto, Canada &middot; Nonprofit fundraising | 1,200 reps</p>
     <ul>
-      <li>Promoted to Senior Team Lead within 1 month; closed 10+ sales/week from 150+ donor presentations and coached 20+ reps.</li>
+      <li>Promoted to Senior Team Lead within 1 month; led a door-to-door nonprofit fundraising team.</li>
+      <li>Closed 10+ sales/week from 150+ donor presentations; trained and coached 20+ reps on script, objection handling and delivery consistency.</li>
     </ul>
   </div>
 
@@ -147,9 +150,10 @@
       <p class="role-title">Sales Account Manager &mdash; Yutian Printing</p>
       <span class="role-dates">Sep 2021 &ndash; Feb 2024</span>
     </div>
-    <p class="role-meta">Kaohsiung, Taiwan &middot; Commercial printing | 20 employees | Avg deal $7K</p>
+    <p class="role-meta">Kaohsiung, Taiwan &middot; Commercial printing | 20 employees | B2C &amp; SMB | Avg deal $7K</p>
     <ul>
-      <li>Owned full-cycle sales and rebuilt the pipeline from 0 to 7,000+ contacts via a loyalty program and omni-channel outreach; rebuilt the CRM and led a 4-person team through COVID.</li>
+      <li>Owned full-cycle sales and rebuilt the pipeline from 0 to 7,000+ contacts through a loyalty programme and omni-channel outreach.</li>
+      <li>Rebuilt the CRM, scoped pricing, led a 4-person team, and launched market strategies that held through COVID; analysed campaign ROI to find and fix revenue inefficiencies.</li>
     </ul>
   </div>
 
@@ -158,23 +162,30 @@
       <p class="role-title">Earlier</p>
       <span class="role-dates">2018 &ndash; 2021</span>
     </div>
-    <p class="oneline"><b>Recruitment Consultant</b>, PERSOLKELLY Taiwan &middot; Sep 2020 &ndash; Sep 2021 &mdash; full-cycle IT recruitment for Ubiquiti, TP-Link, Amazon Eero.</p>
-    <p class="oneline"><b>Product Demonstrator</b>, Ajinomoto Food Europe &middot; London &middot; Oct 2018 &ndash; Sep 2020 &mdash; 25 UK venues; 20% lift in customer satisfaction.</p>
+    <p class="oneline"><b>Recruitment Consultant</b>, PERSOLKELLY Taiwan &middot; Taipei &middot; Sep 2020 &ndash; Sep 2021 &mdash; full-cycle IT recruitment for enterprise clients (Ubiquiti, TP-Link, Amazon Eero); sourced via LinkedIn Recruiter at 50+ cold calls/day.</p>
+    <p class="oneline"><b>Product Demonstrator</b>, Ajinomoto Food Europe &middot; London, UK &middot; Oct 2018 &ndash; Sep 2020 &mdash; 25 UK venues; drove a 20% lift in customer satisfaction and trained new hires on client-facing delivery.</p>
   </div>
 </section>
 
 <section class="skills">
   <h2>Skills</h2>
-  <p><span class="cat">AI &amp; Agents</span> &mdash; Production LLM agent design, prompt engineering, tool/function calling, MCP servers, golden-set eval harnesses, LLM-as-judge scoring, knowledge-base and retrieval design, Claude, Codex, Cursor</p>
-  <p><span class="cat">Support &amp; CX</span> &mdash; Intercom (Fin AI agent, workflows, custom answers, escalation rules), help-center architecture, CSAT and resolution instrumentation, triage and queue design, incident response</p>
-  <p><span class="cat">Billing &amp; Revenue Ops</span> &mdash; Stripe (disputes, refunds, invoices, subscriptions, idempotency), chargeback evidence automation, dispute prevention, discount policy, DocuSign</p>
-  <p><span class="cat">Cloud &amp; Systems Delivery</span> &mdash; AWS (EC2, S3, Lambda, SES, IAM), Cloudflare Pages, Supabase, n8n, webhooks and REST; AI-assisted build workflow (spec &rarr; plan &rarr; review gates &rarr; merge), Git/GitHub, test suites as release gates, behavioural verification against live systems</p>
-  <p><span class="cat">Customer Education &amp; GTM</span> &mdash; Onboarding design, tutorial and walkthrough video production (script &rarr; record &rarr; edit), tone and voice standards, live demos through to close, HubSpot, LinkedIn Sales Navigator</p>
+  <p><span class="cat">AI Support Operations</span> &mdash; Intercom Fin configuration (workflows, custom answers, data connectors, escalation rules, guardrails), resolution-rate and CSAT instrumentation, triage and queue design, ticket-level root cause analysis, incident response</p>
+  <p><span class="cat">Conversational Design</span> &mdash; Conversation architecture and node design, virtual agent scoping, tone and voice systems, fallback and escalation design, persona definition, agent constitutions, prompt engineering</p>
+  <p><span class="cat">Evaluation &amp; QA</span> &mdash; Golden-set evaluation harnesses, LLM-as-judge scoring, DeepEval persona runs, resolution-state tracking, staged rollouts, dry-run verification, post-launch optimisation</p>
+  <p><span class="cat">Automation &amp; Integration</span> &mdash; n8n, Zapier, webhooks, REST APIs, structured JSON pipelines, Model Context Protocol (MCP), tool/function calling, knowledge-base and retrieval design, Claude, Codex, Cursor</p>
+  <p><span class="cat">Payments &amp; Regulated Ops</span> &mdash; Stripe (disputes, chargebacks, refunds, invoices, subscriptions, idempotency), dispute prevention, GDPR erasure and PII handling, security review, audit ledgers</p>
+  <p><span class="cat">Delivery &amp; Enablement</span> &mdash; End-to-end ownership (discovery &rarr; requirements &rarr; design &rarr; build &rarr; QA &rarr; launch), enablement programme design, tutorial and walkthrough video production (script &rarr; record &rarr; edit), help-center architecture, live demos, stakeholder management</p>
+  <p><span class="cat">Cloud &amp; Tooling</span> &mdash; AWS (EC2, S3, Lambda, SES, IAM, Secrets Manager), Cloudflare Pages, Supabase, Bubble, Astro, Notion, Git/GitHub, AI-assisted build workflow (spec &rarr; plan &rarr; review gates &rarr; merge)</p>
 </section>
 
 <section>
   <h2>Education</h2>
-  <p class="oneline"><b>Bachelor of Arts (BA), Arts Management</b> &mdash; University of London, UK &middot; 2020</p>
+  <p class="oneline"><b>Bachelor of Arts (BA), Arts Management</b> &mdash; University of London, London, UK &middot; 2020</p>
+</section>
+
+<section>
+  <h2>Awards</h2>
+  <p class="oneline">"Explaining Technology to Boomers" Award, 2025</p>
 </section>
 
 </body>
