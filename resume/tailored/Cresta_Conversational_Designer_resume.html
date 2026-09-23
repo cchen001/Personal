@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Chieh Chen — Resume</title>
+<style>
+  /* Print-first resume. Single column, real text layer, ATS-parseable.
+     Export: open in Chrome > Print > Save as PDF, margins "Default", background graphics OFF. */
+  :root {
+    --ink: #16181d;
+    --muted: #4a5058;
+    --rule: #c9ced6;
+    --accent: #1f3a5f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: "Source Sans Pro", Calibri, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.34;
+    color: var(--ink);
+    background: #fff;
+    margin: 0 auto;
+    padding: 0.55in 0.6in;
+    max-width: 8.5in;
+  }
+  h1 {
+    font-size: 21pt;
+    line-height: 1.1;
+    margin: 0 0 3px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+  }
+  .contact { font-size: 9.5pt; color: var(--muted); margin: 0 0 9px; }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .headline {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 2px;
+  }
+  .subheadline {
+    font-size: 10pt;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 11px;
+  }
+  h2 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+    margin: 13px 0 7px;
+  }
+  .summary { margin: 0 0 2px; }
+  .role { margin: 0 0 9px; page-break-inside: avoid; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role-title { font-size: 11pt; font-weight: 700; margin: 0; }
+  .role-dates { font-size: 9.5pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .role-meta { font-size: 9.5pt; color: var(--muted); margin: 1px 0 5px; }
+  ul { margin: 0; padding-left: 16px; }
+  li { margin-bottom: 3px; }
+  li::marker { color: var(--muted); }
+  b, strong { font-weight: 700; }
+  .earlier p { margin: 0 0 5px; }
+  .skills p { margin: 0 0 3px; }
+  .skills .cat { font-weight: 700; }
+  .oneline { margin: 0 0 4px; }
+  @media print {
+    body { padding: 0; font-size: 9.7pt; }
+    a { color: inherit; }
+    h2 { page-break-after: avoid; }
+  }
+  @page { margin: 0.5in 0.55in; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Jade Chieh Chen</h1>
+  <p class="contact">
+    chiehjadechen@gmail.com &middot; +1 437 660 2419 &middot;
+    <a href="https://www.linkedin.com/in/jade-chieh-chen/">linkedin.com/in/jade-chieh-chen</a>
+  </p>
+  <p class="headline">Conversational Design &amp; AI Delivery &mdash; Agent Architecture, Voice &amp; Evaluation</p>
+  <p class="subheadline">Designed the conversation architecture, wrote the tone system it speaks in, and built the evaluation loop that proves a change actually helped.</p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Conversational designer and AI operator who has taken an agent from first node to production. Over fourteen months as the sole customer-facing hire at a B2B SaaS I designed the conversation architecture for Intercom Fin across three successive roles &mdash; support, onboarding and customer success &mdash; authored the tone system every reply is written against, and built the persona-based evaluation loop that tells us whether a change improved anything. Eight years of client-facing work before that, across the UK, Taiwan, Canada and a France-based team, in demos, enablement and enterprise conversations.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Founding Support Lead &mdash; Evaboot</p>
+      <span class="role-dates">Jul 2025 &ndash; Present</span>
+    </div>
+    <p class="role-meta">Remote (UTC+8) &middot; B2B SaaS, LinkedIn Sales Navigator data extraction | ~6-person team | Sole customer-facing hire | SMB to Enterprise</p>
+    <ul>
+      <li><b>Designed the conversation architecture for a production virtual agent</b> &mdash; broke onboarding into three triggered nodes plus a pricing node, each with a defined entry condition, purpose and content, after scrapping a first design when the highly interactive model proved wrong for the platform. Configured Intercom Fin across three successive roles &mdash; support, onboarding, and customer success &mdash; each needing different scope, escalation behaviour and voice.</li>
+      <li><b>Authored the tone system the agent and every human reply are written against</b> &mdash; explicit rulings rather than style preferences: reply visibility, capacity state, apology dating, cache truth, professional register. Reviewed and rejected an external support-writing toolkit because it taught the robotic voice we ban, then traced our own bad tone to a single upstream drafting instruction and deleted it, rather than layering more rules on top.</li>
+      <li><b>Built the evaluation loop that proves a change helped</b> &mdash; a 114-case golden suite scored by 50 draft and 50 judge subagents through a deterministic scorer (hard rules 100%, soft 90%), plus a fifteen-persona advisory run through DeepEval against a live agent constitution. Paired it with a resolution data pool categorising every conversation as confirmed, assumed, or abandoned mid-conversation.</li>
+      <li><b>Tuned escalation logic, fallbacks and guardrails</b> &mdash; audited every escalation rule for effectiveness and disabled the majority ahead of a 24-hour automated cycle; rewrote the human-handoff fallback with expectation-setting language (workflow as the fastest path, a person as a longer wait for the same outcome). Median customer wait now 3.3 staffed hours; working inbox down from 630 active threads to 120.</li>
+      <li><b>Delivered enablement that made customers independent</b> &mdash; built the onboarding programme and tutorial library from nothing, scripted, recorded and edited: HubSpot and Clay integration walkthroughs, recurring-export videos, in-app onboarding video. Rebuilt the help center on Astro Starlight / Cloudflare Pages with a 15-category taxonomy over 120 articles, maintained as the agent's live knowledge source.</li>
+      <li><b>Ran end-to-end delivery on every project</b> &mdash; discovery, requirements, design, build, staged rollout, QA and post-launch optimisation, through spec and code review gates at each stage. When an auto-close rule misfired across imported threads, specced a guard with an anomaly abort and ran a controlled re-close that preserved every thread a customer had answered.</li>
+      <li><b>Held the commercial and stakeholder surface alone</b> &mdash; live demos through to close including GDPR-skeptical enterprise buyers, contract execution, and multilingual customer communication during incidents. Corrected a wrong founder-facing weekly report against live state, and published a machine-readable defect feed so engineering could triage without opening conversations.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">SaaS Sales Executive &mdash; All Funeral Services</p>
+      <span class="role-dates">Jan 2025 &ndash; Jul 2025</span>
+    </div>
+    <p class="role-meta">New York, USA &middot; DeathTech SaaS | 100+ employees | Avg deal $20K</p>
+    <ul>
+      <li>Promoted Lead Gen &rarr; Pre-Sales in 1 month and onto Account Management at 5; ran discovery and product demos for SMB and mid-market buyers.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Senior Team Lead &mdash; Globalfaces Direct</p>
+      <span class="role-dates">Mar 2024 &ndash; Dec 2024</span>
+    </div>
+    <p class="role-meta">Toronto, Canada &middot; Nonprofit fundraising | 1,200 reps</p>
+    <ul>
+      <li>Promoted to Senior Team Lead within 1 month; trained and coached 20+ reps on script, objection handling and delivery consistency.</li>
+    </ul>
+  </div>
+
+  <div class="role earlier">
+    <div class="role-head">
+      <p class="role-title">Earlier</p>
+      <span class="role-dates">2018 &ndash; 2024</span>
+    </div>
+    <p class="oneline"><b>Sales Account Manager</b>, Yutian Printing &middot; Kaohsiung, Taiwan &middot; Sep 2021 &ndash; Feb 2024 &mdash; full-cycle sales and account management; rebuilt the pipeline from 0 to 7,000+ contacts; led a 4-person team.</p>
+    <p class="oneline"><b>Recruitment Consultant</b>, PERSOLKELLY Taiwan &middot; Sep 2020 &ndash; Sep 2021 &mdash; enterprise clients: Ubiquiti, TP-Link, Amazon Eero.</p>
+    <p class="oneline"><b>Product Demonstrator</b>, Ajinomoto Food Europe &middot; London &middot; Oct 2018 &ndash; Sep 2020 &mdash; 25 UK venues; trained new hires on brand and client-facing delivery.</p>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <p><span class="cat">Conversational Design</span> &mdash; Conversation architecture and node design, virtual agent scoping, tone and voice systems, fallback and escalation design, expectation-setting language, persona definition, multilingual customer communication</p>
+  <p><span class="cat">Conversational AI Platforms</span> &mdash; Intercom Fin (workflows, custom answers, data connectors, escalation rules, guardrails), agent constitutions, prompt engineering, tool/function calling, Model Context Protocol, knowledge-base and retrieval design, Claude, Codex</p>
+  <p><span class="cat">Evaluation &amp; QA</span> &mdash; Golden-set evaluation harnesses, LLM-as-judge scoring, DeepEval persona runs, resolution-state and CSAT instrumentation, staged rollouts, dry-run verification, post-launch optimisation</p>
+  <p><span class="cat">Delivery</span> &mdash; End-to-end project ownership (discovery &rarr; requirements &rarr; design &rarr; build &rarr; QA &rarr; launch), enablement programme design, tutorial and walkthrough video production (script &rarr; record &rarr; edit), help-center architecture, stakeholder management, live demos</p>
+  <p><span class="cat">Technical</span> &mdash; n8n, Zapier, webhooks, REST APIs, structured JSON, Stripe, AWS (Lambda, S3, SES), Cloudflare Pages, Supabase, Git/GitHub, Notion</p>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p class="oneline"><b>Bachelor of Arts (BA), Arts Management</b> &mdash; University of London, UK &middot; 2020</p>
+</section>
+
+</body>
+</html>
